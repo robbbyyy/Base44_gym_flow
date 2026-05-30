@@ -1,0 +1,55 @@
+{
+  "name": "ScreenNotice",
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "description": "Testo dell'avviso da mostrare sullo schermo secondario"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL immagine da mostrare sullo schermo secondario"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Se true, l'avviso \u00e8 attivo e visibile"
+    },
+    "font_family": {
+      "type": "string",
+      "enum": [
+        "Inter",
+        "Georgia",
+        "Courier New",
+        "Arial Black",
+        "Trebuchet MS",
+        "Impact"
+      ],
+      "default": "Inter",
+      "description": "Font del testo avviso"
+    },
+    "font_size": {
+      "type": "string",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "2xl",
+        "3xl"
+      ],
+      "default": "xl",
+      "description": "Dimensione testo avviso"
+    },
+    "text_color": {
+      "type": "string",
+      "default": "#e5e7eb",
+      "description": "Colore testo avviso (hex)"
+    },
+    "remote_password": {
+      "type": "string",
+      "description": "Password per accesso remoto al pannello avvisi"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "AccessLog",
+  "type": "object",
+  "properties": {
+    "member_id": {
+      "type": "string",
+      "description": "ID dell'iscritto"
+    },
+    "member_name": {
+      "type": "string",
+      "description": "Nome completo dell'iscritto"
+    },
+    "member_code": {
+      "type": "string",
+      "description": "Codice tessera"
+    },
+    "access_time": {
+      "type": "string",
+      "description": "Data e ora dell'accesso"
+    },
+    "access_type": {
+      "type": "string",
+      "enum": [
+        "ingresso",
+        "uscita"
+      ],
+      "default": "ingresso",
+      "description": "Tipo di accesso"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "autorizzato",
+        "negato"
+      ],
+      "description": "Esito del tentativo di accesso"
+    },
+    "denial_reason": {
+      "type": "string",
+      "description": "Motivo del rifiuto accesso"
+    }
+  },
+  "required": [
+    "member_code",
+    "access_time",
+    "status"
+  ]
+}

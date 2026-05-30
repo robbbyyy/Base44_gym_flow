@@ -1,0 +1,118 @@
+{
+  "name": "Member",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "Nome dell'iscritto"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Cognome dell'iscritto"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email dell'iscritto"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefono dell'iscritto"
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data di nascita"
+    },
+    "tax_code": {
+      "type": "string",
+      "description": "Codice fiscale"
+    },
+    "address": {
+      "type": "string",
+      "description": "Indirizzo"
+    },
+    "member_code": {
+      "type": "string",
+      "description": "Codice tessera per il tornello"
+    },
+    "registration_number": {
+      "type": "number",
+      "description": "Numero d'iscrizione progressivo"
+    },
+    "discipline": {
+      "type": "string",
+      "enum": [
+        "Fitness",
+        "Pilates",
+        "Functional",
+        "JuJitsu",
+        "Difesa Personale",
+        "Altro"
+      ],
+      "description": "Disciplina praticata"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL foto tessera"
+    },
+    "subscription_type": {
+      "type": "string",
+      "enum": [
+        "mensile",
+        "trimestrale",
+        "semestrale",
+        "annuale",
+        "giornaliero"
+      ],
+      "description": "Tipo di abbonamento"
+    },
+    "subscription_start": {
+      "type": "string",
+      "format": "date",
+      "description": "Data inizio abbonamento"
+    },
+    "subscription_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Data scadenza abbonamento"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "attivo",
+        "scaduto",
+        "sospeso"
+      ],
+      "default": "attivo",
+      "description": "Stato dell'iscritto"
+    },
+    "medical_cert_expiry": {
+      "type": "string",
+      "format": "date",
+      "description": "Scadenza certificato medico"
+    },
+    "annual_fee": {
+      "type": "number",
+      "description": "Quota iscrizione annuale (\u20ac)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Note aggiuntive"
+    },
+    "membership_start": {
+      "type": "string",
+      "format": "date",
+      "description": "Data inizio iscrizione annuale"
+    },
+    "membership_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Data scadenza iscrizione annuale"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "member_code"
+  ]
+}

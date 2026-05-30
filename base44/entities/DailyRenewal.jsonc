@@ -1,0 +1,50 @@
+{
+  "name": "DailyRenewal",
+  "type": "object",
+  "properties": {
+    "last_name": {
+      "type": "string",
+      "description": "Cognome"
+    },
+    "first_name": {
+      "type": "string",
+      "description": "Nome"
+    },
+    "member_code": {
+      "type": "string",
+      "description": "Numero di tessera"
+    },
+    "quota_versata": {
+      "type": "number",
+      "description": "Quota versata per il rinnovo (\u20ac)"
+    },
+    "quota_iscrizione": {
+      "type": "number",
+      "description": "Quota versata per l'iscrizione (\u20ac)"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "contanti",
+        "pos"
+      ],
+      "default": "contanti",
+      "description": "Metodo di pagamento"
+    },
+    "renewal_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data del rinnovo"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Note aggiuntive"
+    }
+  },
+  "required": [
+    "last_name",
+    "first_name",
+    "member_code",
+    "renewal_date"
+  ]
+}
